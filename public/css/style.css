@@ -23,3 +23,12 @@ div.card {
     padding: 17px 20px;
     border-radius: 5px;
 }
+
+/* MODIFICAÇÕES DA PARTIDA */
+img {
+    margin: 20px;
+}
+
+#jogo a img:hover {
+    width: 130px;
+}

@@ -1,13 +1,24 @@
 <%- include partials/header.ejs %>
 
 <body>
+    <nav class="navbar navbar-dark bg-dark">
+        <h5 class="navbar-brand ml-5">Jogador: 0</h5>
+        <div class="float-right text-light">
+            <h5 class="d-inline">Computador: 0</h5>
+            <button class="btn btn-primary">Sair</button>
+        </div>
+    </nav>
     <section>
-        <div class="container">
-            <div class="row mt-4">
-                <h4>Marcos</h4>
-            </div>
-            <div class="row">
-                
+        <!-- INICIO JOGO -->
+        <div class="container" id="jogo">
+            <div class="row d-flex justify-content-center">
+                <div>
+                    <h1 class="text-center">Escolha uma opção</h1>
+
+                    <a href="#"><img src="/img/pedra.png" alt="pedra"></a>
+                    <a href="#"><img src="/img/papel.png" alt="papel"></a>
+                    <a href="#"><img src="/img/tesoura.png" alt="tesoura"></a>
+                </div>
             </div>
         </div>
     </section>

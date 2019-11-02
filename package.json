@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Anderson Alpin",
+  "author": "Anderson e Leonardo",
   "license": "ISC",
   "dependencies": {
     "body": "^5.1.0",
