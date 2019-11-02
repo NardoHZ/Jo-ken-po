@@ -1,19 +1,7 @@
 <%- include partials/header.ejs %>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="navbar-brand ml-3">
-            <span id="nomeJogador" class="h5"><%= nome %>: </span>
-            <span class="h5" id="placarJogador">0</span>
-        </div>
-        <div class="float-right text-light">
-            <span class="h5 d-inline">Computador: </span>
-            <span class="h5">0</span>
-            <button class="btn btn-success mr-2 ml-4">Salvar Pontuação</button>
-            <button class="btn btn-danger mr-3">Sair</button>
-        </div>
-    </nav>
-
+    <%- include partials/navbar.ejs %>
     <div class="container mt-5" id="placar">
         <div id="jogador">
             <h1 class="text-center"><%= nome %></h1>
