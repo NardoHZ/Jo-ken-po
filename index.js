@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const port = 3333;
+const port = 8080;
 
 //EXPRESS utilizará o EJS
 app.set('view engine', 'ejs');
@@ -18,8 +18,11 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
-app.get("/partida", (req, res) => {
-    res.render("partida");
+app.post("/partida", (req, res) => {
+    var nome = req.body.nome;
+    res.render("partida", {
+        nome: nome
+    });
 });
 
 
