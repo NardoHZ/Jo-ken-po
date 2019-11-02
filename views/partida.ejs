@@ -3,29 +3,39 @@
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <div class="navbar-brand ml-3">
-            <span class="h5 d-inline">Computador: </span>
-            <span class="h5">0</span>
+            <span id="nomeJogador" class="h5"><%= nome %>: </span>
+            <span class="h5" id="placarJogador">0</span>
         </div>
         <div class="float-right text-light">
-            <span class="h5"><%= nome %>: </span>
+            <span class="h5 d-inline">Computador: </span>
             <span class="h5">0</span>
             <button class="btn btn-success mr-2 ml-4">Salvar Pontuação</button>
             <button class="btn btn-danger mr-3">Sair</button>
         </div>
     </nav>
-    <section>
-        <!-- INICIO JOGO -->
-        <div class="container" id="jogo">
-            <div class="row d-flex justify-content-center">
-                <div>
-                    <h1 class="text-center">Escolha uma opção</h1>
 
-                    <a href="#"><img src="/img/pedra.png" alt="pedra"></a>
-                    <a href="#"><img src="/img/papel.png" alt="papel"></a>
-                    <a href="#"><img src="/img/tesoura.png" alt="tesoura"></a>
-                </div>
-            </div>
+    <div class="container mt-5" id="placar">
+        <div id="jogador">
+            <h1 class="text-center"><%= nome %></h1>
+            <ul id="jogador-escolha">
+                <li><a id="jogador-escolha-1"><img src="/img/pedra.png"></a></li>
+                <li><a id="jogador-escolha-2"><img src="/img/papel.png"></a></li>
+                <li><a id="jogador-escolha-3"><img src="/img/tesoura.png"></a></li>
+            </ul>
         </div>
-    </section>
+
+        <span class="mx-3 h1">vs</span>
+
+        <div id="computador">
+            <h1 class="text-center">Computador</h1>
+            <ul id="computador-escolha">
+                <li><a id="computador-escolha-1"><img src="/img/pedra.png"></a></li>
+                <li><a id="computador-escolha-2"><img src="/img/papel.png"></a></li>
+                <li><a id="computador-escolha-3"><img src="/img/tesoura.png"></a></li>
+            </ul>
+        </div>
+
+    </div>
+
 </body>
 <%- include partials/footer.ejs %>
