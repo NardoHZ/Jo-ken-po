@@ -71,3 +71,10 @@ ul#jogador-escolha li a:hover{
 ul#jogador-escolha li a img, ul#computador-escolha li a img {
     max-width: 100px;
 }
+
+#mensagens {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 32px;
+    text-align: center;
+}

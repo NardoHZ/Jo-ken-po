@@ -2,27 +2,38 @@
 
 <body>
     <%- include partials/navbar.ejs %>
-    <div class="container mt-5" id="placar">
-        <div id="jogador">
-            <h1 class="text-center"><%= nome %></h1>
-            <ul id="jogador-escolha">
-                <li><a id="jogador-escolha-1"><img src="/img/pedra.png"></a></li>
-                <li><a id="jogador-escolha-2"><img src="/img/papel.png"></a></li>
-                <li><a id="jogador-escolha-3"><img src="/img/tesoura.png"></a></li>
-            </ul>
+    <div class="container">
+
+        <div class="mt-5 bg-secondary" id="mensagens">
+           Pedra, Papel e Tesoura
         </div>
 
-        <span class="mx-3 h1">vs</span>
+        <div class="mt-5" id="placar">
+            <div id="jogador">
+                <h2 class="text-center"><%= nome %></h2>
+                <ul id="jogador-escolha">
+                    <li><a id="jogador-escolha-1"><img src="/img/pedra.png"></a></li>
+                    <li><a id="jogador-escolha-2"><img src="/img/papel.png"></a></li>
+                    <li><a id="jogador-escolha-3"><img src="/img/tesoura.png"></a></li>
+                </ul>
+            </div>
 
-        <div id="computador">
-            <h1 class="text-center">Computador</h1>
-            <ul id="computador-escolha">
-                <li><a id="computador-escolha-1"><img src="/img/pedra.png"></a></li>
-                <li><a id="computador-escolha-2"><img src="/img/papel.png"></a></li>
-                <li><a id="computador-escolha-3"><img src="/img/tesoura.png"></a></li>
-            </ul>
+            <span class="mx-3 h1">vs</span>
+
+            <div id="computador">
+                <h2 class="text-center">Computador</h2>
+                <ul id="computador-escolha">
+                    <li><a id="computador-escolha-1"><img src="/img/pedra.png"></a></li>
+                    <li><a id="computador-escolha-2"><img src="/img/papel.png"></a></li>
+                    <li><a id="computador-escolha-3"><img src="/img/tesoura.png"></a></li>
+                </ul>
+            </div>
+
         </div>
 
+        <div class="mt-5 bg-secondary" id="mensagens">
+            Mensagens
+        </div>
     </div>
 
 </body>
