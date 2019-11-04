@@ -50,7 +50,7 @@ function jogar(escolha) {
 
     document.getElementById("computador-escolha-3").classList.remove('selecionado');
 
-    
+
     // Mostrar o resultado
 
     document.getElementById("jogador-escolha-" + jogadorEscolha).classList.add('selecionado');
