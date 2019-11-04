@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const port = 8080;
+const connection = require("./database/database");
+const Ranking = require("./database/Ranking");
 
 //EXPRESS utilizará o EJS
 app.set('view engine', 'ejs');
@@ -20,6 +22,7 @@ app.get("/", (req, res) => {
 
 app.post("/partida", (req, res) => {
     var nome = req.body.nome;
+    
     res.render("partida", {
         nome: nome
     });
