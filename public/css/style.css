@@ -72,9 +72,19 @@ ul#jogador-escolha li a img, ul#computador-escolha li a img {
     max-width: 100px;
 }
 
+#mensagens, #titulo {
+    padding: 5px;
+    margin-top: 25px;
+}
+
 #mensagens {
     border-radius: 5px;
-    padding: 5px;
+    font-size: 32px;
+    text-align: center;
+}
+
+#titulo {
+    border-radius: 5px;
     font-size: 32px;
     text-align: center;
 }
