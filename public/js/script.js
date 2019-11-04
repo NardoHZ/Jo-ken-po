@@ -36,6 +36,8 @@ function jogar(escolha) {
         jogadorPontuacao++;
     }
 
+    // Limpar a seleção
+
     document.getElementById("jogador-escolha-1").classList.remove('selecionado');
 
     document.getElementById("jogador-escolha-2").classList.remove('selecionado');
@@ -48,11 +50,8 @@ function jogar(escolha) {
 
     document.getElementById("computador-escolha-3").classList.remove('selecionado');
 
-
-
-
-
-
+    
+    // Mostrar o resultado
 
     document.getElementById("jogador-escolha-" + jogadorEscolha).classList.add('selecionado');
     document.getElementById("computador-escolha-" + computadorEscolha).classList.add('selecionado');
