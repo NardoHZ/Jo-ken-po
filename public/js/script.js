@@ -1,5 +1,7 @@
 var jogadorEscolha = 0;
 var computadorEscolha = 0;
+var jogadorPontuacao = 0;
+var computadorPontuacao = 0;
 var vencedor = 0;
 
 function jogar(escolha) {
@@ -10,9 +12,10 @@ function jogar(escolha) {
     //tesoura = 3   
     if ((jogadorEscolha == 1) && (computadorEscolha == 3)) {
         vencedor = 1
-
+        jogadorPontuacao++;
     } else if ((jogadorEscolha == 1) && (computadorEscolha == 2)) {
         vencedor = 2;
+        computadorPontuacao++;
     } else if ((jogadorEscolha == 1) && (computadorEscolha == 1)) {
         vencedor = 0;
     } else if ((jogadorEscolha == 3) && (computadorEscolha == 3)) {
@@ -21,12 +24,16 @@ function jogar(escolha) {
         vencedor = 0;
     } else if ((jogadorEscolha == 2) && (computadorEscolha == 3)) {
         vencedor = 2;
+        computadorEscolha++;
     } else if ((jogadorEscolha == 3) && (computadorEscolha == 2)) {
         vencedor = 1;
+        jogadorPontuacao++;
     } else if ((jogadorEscolha == 3) && (computadorEscolha == 1)) {
         vencedor = 2;
+        computadorPontuacao++;
     } else if ((jogadorEscolha == 2) && (computadorEscolha == 1)) {
-        vencedor = 2;
+        vencedor = 1;
+        jogadorPontuacao++;
     }
 
     document.getElementById("jogador-escolha-1").classList.remove('selecionado');
@@ -54,9 +61,10 @@ function jogar(escolha) {
 
     } if (vencedor == 1) {
         document.getElementById('mensagens').innerHTML = 'Parabéns, você ganhou!!';
+        document.getElementById('jogadorPontuacao').innerHTML = jogadorPontuacao;
 
     } if (vencedor == 2) {
         document.getElementById('mensagens').innerHTML = 'O computador ganhou, tente novamente...';
-
+        document.getElementById('computadorPontuacao').innerHTML = computadorPontuacao;
     }
 }
