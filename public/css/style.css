@@ -20,6 +20,16 @@ div.card {
     font-size: 1.1em;
 }
 
+#tituloRanking {
+    padding: 20px 0px 0px 15px;
+}
+
+#tabela {
+    overflow: auto;
+    height: 333px;
+    margin: 0 auto;
+}
+
 .tabela {
     padding: 17px 20px;
     border-radius: 5px;

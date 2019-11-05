@@ -80,8 +80,6 @@ function jogar(escolha) {
         computadorPontuacao -= 1;
     }
 
-    // limpar();
-
     // Mostrar o resultado
     document.getElementById("jogador-escolha-" + jogadorEscolha).classList.add('selecionado');
     document.getElementById("computador-escolha-" + computadorEscolha).classList.add('selecionado');
@@ -99,4 +97,6 @@ function jogar(escolha) {
         document.getElementById('jogadorPontuacao').innerHTML = jogadorPontuacao;
         document.getElementById('computadorPontuacao').innerHTML = computadorPontuacao;
     }
+
+    document.getElementById("pontuacao").value = jogadorPontuacao;
 }

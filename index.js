@@ -17,7 +17,13 @@ app.use(bodyParser.json());
 
 //Rotas
 app.get("/", (req, res) => {
-    res.render("index");
+    Ranking.findAll({raw: true, order: [
+        ['pontuacao','DESC']
+    ]}).then(ranking => {
+        res.render("index", {
+            ranking: ranking
+        });
+    });
 });
 
 app.post("/partida", (req, res) => {
@@ -28,13 +34,19 @@ app.post("/partida", (req, res) => {
 });
 
 app.post("/salvarRanking", (req, res) => {
-    
-    Ranking.create({
-        nome: "script.nomeJogador",
-        pontuacao: 1
-    }).then(() => {
+    var nome = req.body.jogador.replace(":", "");
+    var pontuacao = req.body.pontuacao;
+
+    if(nome.trim() != "Player"){
+        Ranking.create({
+            nome: nome,
+            pontuacao: pontuacao
+        }).then(() => {
+            res.redirect("/");
+        });
+    }else {
         res.redirect("/");
-    });
+    }
 });
 
 

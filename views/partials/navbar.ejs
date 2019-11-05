@@ -2,7 +2,7 @@
 
     <!-- PLACAR -->
     <div class="navbar-brand">
-        <span id="nomeJogador">
+        <span>
             <% if(nome){ %>
             <%= nome %>:
             <% }else{ %>
@@ -32,8 +32,13 @@
 
         <!-- INPUT SALVAR PONTUAÇÃO -->
         <form class="form-inline" method="POST" action="/salvarRanking">
-            <input type="text" name="jogador" id="jogador">
-            <input type="text" name="pontuacao" id="pontuacao">
+            <input type="hidden" name="jogador" value="
+            <% if(nome){ %>
+                <%= nome %>:
+                <% }else{ %>
+                Player
+                <% } %> ">
+            <input type="hidden" name="pontuacao" id="pontuacao">
             <button type="text" class="btn btn-danger mr-2">Salvar Pontuação</button>
         </form>
 
