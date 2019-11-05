@@ -21,10 +21,19 @@ app.get("/", (req, res) => {
 });
 
 app.post("/partida", (req, res) => {
-    var nome = req.body.nome;
-    
+    var nome = req.body.nome;    
     res.render("partida", {
         nome: nome
+    });
+});
+
+app.post("/salvarRanking", (req, res) => {
+    
+    Ranking.create({
+        nome: "script.nomeJogador",
+        pontuacao: 1
+    }).then(() => {
+        res.redirect("/");
     });
 });
 

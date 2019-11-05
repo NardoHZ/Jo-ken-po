@@ -5,17 +5,20 @@
     <div class="container">
 
         <div class="bg-dark text-light" id="titulo">
-            Pedra, Papel e Tesoura
+            Rodada 0/6
         </div>
 
         <div class="mt-3" id="placar">
             <div id="jogador">
                 <h2 class="text-center"><%= nome %></h2>
                 <ul id="jogador-escolha">
-                    <li><a onmouseout="limpar()" id="jogador-escolha-1" onclick="jogar(1)"><img src="/img/pedra.png"></a>
+                    <li><a onmouseout="limpar()" id="jogador-escolha-1" onclick="jogar(1)"><img
+                                src="/img/pedra.png"></a>
                     </li>
-                    <li><a onmouseout="limpar()" id="jogador-escolha-2" onclick="jogar(2)"><img src="/img/papel.png"></a></li>
-                    <li><a onmouseout="limpar()" id="jogador-escolha-3" onclick="jogar(3)"><img src="/img/tesoura.png"></a></li>
+                    <li><a onmouseout="limpar()" id="jogador-escolha-2" onclick="jogar(2)"><img
+                                src="/img/papel.png"></a></li>
+                    <li><a onmouseout="limpar()" id="jogador-escolha-3" onclick="jogar(3)"><img
+                                src="/img/tesoura.png"></a></li>
                 </ul>
             </div>
 
@@ -32,22 +35,19 @@
 
         </div>
 
-        <div class="bg-secondary" id="mensagens">
+        <div class="bg-dark text-light" id="mensagens">
             Resultado
+        </div>
+
+        <div class="card mt-4">
+            <div class="cart-tittle text-danger" id="rodadaFinal" style="font-size: 1.5em;"></div>
+            <div class="card-body text-left" id="log" style="font-size: 1.3em;"></div>
         </div>
 
     </div>
 
     <script>
-        function limpar() {
-            document.getElementById("jogador-escolha-1").classList.remove('selecionado');
-            document.getElementById("jogador-escolha-2").classList.remove('selecionado');
-            document.getElementById("jogador-escolha-3").classList.remove('selecionado');
-            document.getElementById("computador-escolha-1").classList.remove('selecionado');
-            document.getElementById("computador-escolha-2").classList.remove('selecionado');
-            document.getElementById("computador-escolha-3").classList.remove('selecionado');
-            document.getElementById('mensagens').innerHTML = 'Resultado';
-        }
+
     </script>
 
 </body>

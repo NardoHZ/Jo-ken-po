@@ -1,13 +1,19 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
 
     <!-- PLACAR -->
     <div class="navbar-brand">
-        <span > <%= nome %>: </span>
+        <span id="nomeJogador">
+            <% if(nome){ %>
+            <%= nome %>:
+            <% }else{ %>
+            Player:
+            <% } %>
+        </span>
         <span id="jogadorPontuacao">0</span>
 
         <span class="mx-2">|</span>
 
-        <span>Computador</span>
+        <span>Computador:</span>
         <span id="computadorPontuacao">0</span>
     </div>
 
@@ -24,10 +30,50 @@
             </li>
         </ul>
 
-        <form class="form-inline">
-            <button type="text" class="btn btn-success mr-2">Salvar Pontuação</button>
-            <button type="text" class="btn btn-danger">Sair</button>
+        <!-- INPUT SALVAR PONTUAÇÃO -->
+        <form class="form-inline" method="POST" action="/salvarRanking">
+            <input type="text" name="jogador" id="jogador">
+            <input type="text" name="pontuacao" id="pontuacao">
+            <button type="text" class="btn btn-danger mr-2">Salvar Pontuação</button>
         </form>
+
+        <form class="form-inline">
+            <!-- Modal -->
+            <button type="button" class="btn btn-danger mr-2" data-toggle="modal"
+                data-target="#modalRegras">Regras</button>
+            <a href="/" class="btn btn-danger text-light">Sair</a>
+        </form>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="modalRegras">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Regras</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span class="h6">Regras do jogo:</span>
+                    <ul>
+                        <li>Pedra empata com Pedra e ganha de Tesoura</li>
+                        <li>Tesoura empata com Tesoura e ganha de Papel</li>
+                        <li>Papel empata com Papel e ganha de Pedra</li>
+                    </ul>
+                    <span class="h6">Regras de pontuação:</span>
+                    <ul>
+                        <li>Cada partida possui 6 rodadas</li>
+                        <li>Vitoria: 3 pontos</li>
+                        <li>Derrota: -1 ponto</li>
+                        <li>Empate: 1 ponto</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 </nav>
