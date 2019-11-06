@@ -7,6 +7,10 @@ body#home {
     background: url('../img/fundo-joken.png') no-repeat center center fixed;
     background-size: cover;
 }
+body#partida {
+    background: url('../img/backg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
 
 div.card {
     padding: 10px 30px;
