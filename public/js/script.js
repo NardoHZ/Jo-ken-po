@@ -36,9 +36,6 @@ function jogar(escolha) {
     }else {
         document.getElementById('rodadaFinal').innerHTML = '';
     }
-
-    
-
     //pedra = 1 
     // papel = 2
     //tesoura = 3   
