@@ -46,7 +46,7 @@ div.card {
     align-items: center;
     justify-content: center;
     padding: 15px;
-    height: 175px;
+    /* height: 175px; */
 }
 
 #jogador, #computador {
