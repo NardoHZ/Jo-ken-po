@@ -2,19 +2,21 @@
 
     <!-- PLACAR -->
     <div class="navbar-brand">
-        <span>
-            <% if(nome){ %>
-            <%= nome %>:
-            <% }else{ %>
-            Player:
-            <% } %>
-        </span>
-        <span id="jogadorPontuacao">0</span>
+        <div>
+            <span>
+                <% if(nome){ %>
+                <%= nome %>:
+                <% }else{ %>
+                Player:
+                <% } %>
+            </span>
+            <span id="jogadorPontuacao">0</span>
+        </div>
 
-        <span class="mx-2">|</span>
-
-        <span>Computador:</span>
+        <div>
+            <span>Computador:</span>
         <span id="computadorPontuacao">0</span>
+        </div>
     </div>
 
     <!-- MENU HAMBURGUER -->
