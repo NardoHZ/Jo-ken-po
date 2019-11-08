@@ -46,6 +46,7 @@ div.card {
     align-items: center;
     justify-content: center;
     padding: 15px;
+    height: 175px;
 }
 
 #jogador, #computador {
@@ -76,8 +77,12 @@ ul#jogador-escolha li, ul#computador-escolha li {
     display: inline;
 }
 
-ul#jogador-escolha li a, ul#computador-escolha li a{
+ul#jogador-escolha li a{
     opacity: .2;
+}
+
+ul#computador-escolha li a{
+    opacity: .0;
 }
 
 ul#jogador-escolha li a:hover, ul#jogador-escolha li a.selecionado, ul#computador-escolha li a.selecionado {
