@@ -21,7 +21,7 @@
     <button class="navbar-toggler" data-toggle="collapse" data-target="#botoes">
         <span class="navbar-toggler-icon"></span>
     </button>
-
+    
     <!-- BOTOES -->
     <div class="collapse navbar-collapse" id="botoes">
         <ul class="navbar-nav ml-auto">
@@ -31,7 +31,7 @@
         </ul>
 
         <!-- INPUT SALVAR PONTUAÇÃO -->
-        <form class="form-inline" method="POST" action="/salvarRanking">
+        <form class="form-inline float-left" method="POST" action="/salvarRanking">
             <input type="hidden" name="jogador" value="
             <% if(nome){ %>
                 <%= nome %>:

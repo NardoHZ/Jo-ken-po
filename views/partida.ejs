@@ -9,38 +9,36 @@
         </div>
         
 
-        <div class="mt-3" id="placar">
+        <div class="row box">
             <div id="jogador">
-                <h2 class="text-center"><%= nome %></h2>
+                <h2 class="text-center h3 preto">Escolha a sua jogada</h2>
                 <ul id="jogador-escolha">
-                    <li><a onmouseout="limpar()" id="jogador-escolha-1" onclick="jogar(1)"><img
+                    <li><a onmouseout="limpar()" onmousedown="invisivel()" id="jogador-escolha-1" onclick="jogar(1)"><img
                                 src="/img/pedra.png"></a>
                     </li>
-                    <li><a onmouseout="limpar()" id="jogador-escolha-2" onclick="jogar(2)"><img
+                    <li><a onmouseout="limpar()" onmousedown="invisivel()" id="jogador-escolha-2" onclick="jogar(2)"><img
                                 src="/img/papel.png"></a></li>
-                    <li><a onmouseout="limpar()" id="jogador-escolha-3" onclick="jogar(3)"><img
+                    <li><a onmouseout="limpar()" onmousedown="invisivel()" id="jogador-escolha-3" onclick="jogar(3)"><img
                                 src="/img/tesoura.png"></a></li>
                 </ul>
             </div>
 
-            <span class="mx-3 h1">vs</span>
+        </div>
 
+        <div class="row box">
+            
             <div id="computador">
-                <h2 class="text-center">Computador</h2>
+                <h2 class="text-center h3 preto">Computador</h2>
                 <ul id="computador-escolha">
-                    <li><a id="computador-escolha-1"><img src="/img/pedra.png"></a></li>
-                    <li><a id="computador-escolha-2"><img src="/img/papel.png"></a></li>
-                    <li><a id="computador-escolha-3"><img src="/img/tesoura.png"></a></li>
+                    <li><a class="invisivel" id="computador-escolha-1"><img src="/img/pedra.png"></a></li>
+                    <li><a class="invisivel" id="computador-escolha-2"><img src="/img/papel.png"></a></li>
+                    <li><a class="invisivel" id="computador-escolha-3"><img src="/img/tesoura.png"></a></li>
                 </ul>
             </div>
 
         </div>
 
-        <div class="bg-dark text-light" id="mensagens">
-            Resultado
-        </div>
-
-        <div class="card mt-4">
+        <div class="card mt-2">
             <div class="cart-tittle text-danger" id="rodadaFinal" style="font-size: 1.5em;"></div>
             <div class="card-body text-left" id="log" style="font-size: 1.3em;"></div>
         </div>

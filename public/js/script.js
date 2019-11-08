@@ -15,6 +15,12 @@ function limpar() {
     document.getElementById('mensagens').innerHTML = 'Resultado';
 }
 
+function invisivel(){
+    document.getElementById("computador-escolha-1").style.display="none";
+    document.getElementById("computador-escolha-2").style.display="none";
+    document.getElementById("computador-escolha-3").style.display="none";
+}
+
 function jogar(escolha) {
     jogadorEscolha = escolha;
     computadorEscolha = Math.floor((Math.random() * (3 - 1 + 1))) + 1;
@@ -80,6 +86,7 @@ function jogar(escolha) {
     // Mostrar o resultado
     document.getElementById("jogador-escolha-" + jogadorEscolha).classList.add('selecionado');
     document.getElementById("computador-escolha-" + computadorEscolha).classList.add('selecionado');
+    document.getElementById("computador-escolha-" + computadorEscolha).style.display="inline";
     if (vencedor == 0) {
         document.getElementById('log').innerHTML = 'Empate';
         document.getElementById('jogadorPontuacao').innerHTML = jogadorPontuacao;
