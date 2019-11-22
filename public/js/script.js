@@ -39,8 +39,10 @@ function jogar(escolha) {
 
     if (rodadas == 6) {
         document.getElementById('rodadaFinal').innerHTML = 'Partida finalizada. Salve sua pontuação e tente novamente...';
+        document.getElementById('buttonSalvar').disabled = false;
     }else {
         document.getElementById('rodadaFinal').innerHTML = '';
+        document.getElementById('buttonSalvar').disabled = true;
     }
     //pedra = 1 
     // papel = 2
