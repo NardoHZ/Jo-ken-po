@@ -10,6 +10,7 @@ body#home {
 body#partida {
     background: url('../img/backg.jpg') no-repeat center center fixed;
     background-size: cover;
+    min-width: 270px;
 }
 
 div.card {
